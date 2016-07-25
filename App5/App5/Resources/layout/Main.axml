@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <TextView
+        android:text="₹ Monthly Amount!"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="51.0dp"
+        android:id="@+id/mnth_amnt_tv"
+        android:textSize="30dp"
+        android:paddingLeft="5px"
+        android:paddingRight="5px"
+        android:gravity="right"
+        android:layout_marginTop="10px" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40.5dp"
+        android:id="@+id/linearLayout1"
+        android:weightSum="100"
+        android:paddingLeft="10px"
+        android:paddingRight="10px">
+        <TextView
+            android:layout_weight="50"
+            android:text="Item Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView1"
+            android:gravity="left" />
+        <TextView
+            android:layout_weight="50"
+            android:text="Item price ₹"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView2"
+            android:gravity="end" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="64.0dp"
+        android:id="@+id/linearLayout2"
+        android:paddingLeft="5px"
+        android:paddingRight="5px">
+        <EditText
+            android:layout_width="200.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/itemName_et"
+            android:hint="Name of the Item" />
+        <EditText
+            android:inputType="number"
+            android:layout_width="102.5dp"
+            android:layout_height="match_parent"
+            android:id="@+id/price_et"
+            android:hint="₹"
+            android:layout_marginLeft="60dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="49.0dp"
+        android:id="@+id/linearLayout3"
+        android:weightSum="2"
+        android:paddingLeft="5px"
+        android:paddingRight="5px">
+        <Button
+            android:text="Add"
+            android:layout_width="100dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:id="@+id/addList_btn" />
+        <Button
+            android:text="Show All"
+            android:layout_width="100dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:id="@+id/showAll_btn" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="339.5dp"
+             android:fastScrollEnabled="true"
+            android:transcriptMode="alwaysScroll"
+            android:id="@+id/listView1" />
+    </RelativeLayout>
+</LinearLayout>
